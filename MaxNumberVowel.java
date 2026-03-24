@@ -12,7 +12,7 @@ public class MaxNumberVowel {
             }
         }
 
-        int max=0;
+        int max=count;
         //Slide Window
         for(int i=k; i<str.length(); i++){
             if(isVowel(str.charAt(i))){
