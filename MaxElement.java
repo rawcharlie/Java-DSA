@@ -1,4 +1,4 @@
-public class MaxArray {
+public class MaxElement {
     public static void main (String[] args ){
     int [] arr= {3,2,5,0,9}; //initialze array
 
@@ -14,4 +14,3 @@ public class MaxArray {
     System.out.println("Maximum Element:"+max);
 }
 }
-
