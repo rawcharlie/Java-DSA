@@ -4,13 +4,9 @@ public class LongestPalindromeSubstring{
 
         LongestPalindromeSubstring obj = new LongestPalindromeSubstring();
 
-        String s1 = "A man, a plan, a canal: Panama";
-        String s2 = "race a car";
-        String s3 = "0P";
+        String s1 = "babab";
 
         System.out.println(obj.isPalindrome(s1)); // true
-        System.out.println(obj.isPalindrome(s2)); // false
-        System.out.println(obj.isPalindrome(s3)); // false
     }
 
     public boolean isPalindrome(String s) {
