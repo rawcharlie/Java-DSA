@@ -2,11 +2,13 @@
 using namespace std;
 
 int main() {
-    cout<<(10+20*3>50);
+    int a=8;
+    int b=8;
 
-    if(0){
-        cout<<"Hello";
+    if(a>5 && b>8 && a++ && b--){
+        cout<<"True";
+    }else{
+        cout<<"False";
     }
-    
     return 0;
 }
