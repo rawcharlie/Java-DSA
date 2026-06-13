@@ -1,14 +1,4 @@
 public class LongestPalindromeSubstring{
-
-    public static void main(String[] args) {
-
-        LongestPalindromeSubstring obj = new LongestPalindromeSubstring();
-
-        String s1 = "babab";
-
-        System.out.println(obj.isPalindrome(s1)); // true
-    }
-
     public boolean isPalindrome(String s) {
 
         int left = 0;
@@ -34,5 +24,14 @@ public class LongestPalindromeSubstring{
         }
 
         return true;
+    }
+    
+    public static void main(String[] args) {
+
+        LongestPalindromeSubstring obj = new LongestPalindromeSubstring();
+
+        String s1 = "babab";
+
+        System.out.println(obj.isPalindrome(s1)); // true
     }
 }
