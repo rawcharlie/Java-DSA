@@ -6,16 +6,16 @@ public class NumberUtility {
         return (age>18)? "Eligible":"Not Eligible";
     }
 
-    public static String checkPrime(int n){
-        if (n <= 1) return "Not Prime"; // 0 and 1 are not prime
-        if (n <= 3) return "Prime";  // 2 and 3 are prime
-        if (n % 2 == 0 || n % 3 == 0) return "Not Prime";
-        
-        for (int i = 5; i * i <= n; i += 6) {
-        if (n % i == 0 || n % (i + 2) == 0)
-            return "Not Prime";
+    public static boolean checkPrime(int n){
+        if(n<=1){
+            return false;
         }
-        return "Prime";
+        for(int i=2; i<=n-1; i++){
+            if(n%i==0){
+                return false;
+            }
+        }
+        return true;
     }
     
 
@@ -27,33 +27,41 @@ public class NumberUtility {
         return fact;
     }
 
-public static void main(String args[]){
+    public static void main(String args[]){
+    while(true){
+    System.out.println("Press For:");
     Scanner sc = new Scanner(System.in);
-    System.out.println("Press For: ");
     System.out.println("1.Voter Eligibility");
     System.out.println("2.Prime Number Check");
     System.out.println("3.Factorial");
+    System.out.println("Enter Your Choice:");
+
   
     int choice=sc.nextInt();
 
     if(choice==1){
-        System.out.print("Enter your age: ");
+        System.out.print("Enter your age: \n");
         int age=sc.nextInt();
-        Age(age);
+        System.out.println("Voting Status: " + Age(age));
     }
-
-    if(choice==2){
-        System.out.print("Enter your number: ");
+    else if(choice==2){
+        System.out.print("Enter your number: \n");
         int n=sc.nextInt();
-        checkPrime(n);
-        System.out.println((checkPrime(n)));
+        if (checkPrime(n)) {
+        System.out.println(n + " is Prime");
+        } else {
+        System.out.println(n + " is Not Prime");
+        }
     }
-
-    if (choice==3) {
+    else if (choice==3) {
         System.out.print("Enter your number: ");
         int n= sc.nextInt();
-        factorial(n);
-        System.out.println(factorial(n));
+        System.out.println("Factorial of " + n + " is: " + factorial(n));
     }
-}
+    else{
+        System.out.println("Invalid Input");
+    }
+    System.out.println("");
+    }
+    }
 }
