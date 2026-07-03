@@ -46,6 +46,38 @@ class Patterns{
             System.out.println("");
         }
     }
+    public static void pattern2_s4(int n){
+        for(int i=n; i>=1; i--){
+            for(int j=1; j<=i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    public static void pattern2_s5(int n){
+        for(int i=n; i>=1; i--){
+            for(int j=1; j<=i; j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+    public static void pattern2_s6(int n){
+        for(int i=n; i>=1; i--){
+            for(int j=1; j<=i; j++){
+                System.out.print(i);
+            }
+            System.out.println();
+        }
+    }
+    public static void pattern2_s7(int n){
+        for(int i=n; i>=1; i--){
+            for(int j=1; j<=i; j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
 }
 
 
@@ -54,6 +86,6 @@ class Main{
         int n = 5;
         char ch = 'A'; 
         Patterns p = new Patterns(); //memory
-        p.pattern2_s3(n);
+        p.pattern2_s6(n);
     }
 }
