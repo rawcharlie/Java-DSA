@@ -29,10 +29,10 @@ class LinkedListOperations
 
     public void insertAtBeginning(int data)
     {
-        Node newNode = new Node(data); //dynamic memory allocation
-        newNode.next=head; //if an element added to the linked list it attach new next = head
+        Node newNode = new Node(data);  //dynamic memory allocation
+        newNode.next=head;  //if an element added to the linked list it attach new next = head
         head=newNode; // now new node become the first element 
-        length++; // leangth inc..
+        length++;  // leangth inc..
         System.out.println("Node Inserted at beginning with data = "+data+" & length="+length);
     }
 
@@ -98,6 +98,56 @@ class LinkedListOperations
 
        display();
 
+    }
+
+    public void findMiddle()
+    {
+        if(head==null)
+        {
+            System.out.println("Linked List is Empty");
+            return;
+        }
+ 
+        else if (head.next==null)
+        {
+            System.out.println("Middle Element is: "+head.data);
+            return;
+        }
+ 
+        Node slow=head;
+        Node fast=head;
+ 
+        while(fast.next != null && fast.next.next != null)
+        {
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+ 
+        System.out.println("Middle Element of Linked List is: "+slow.data);
+    }
+ 
+    public void findMiddleLength()
+    {
+        if(head==null)
+        {
+            System.out.println("Linked List is Empty");
+            return;
+        }
+ 
+        else if (head.next==null)
+        {
+            System.out.println("Middle Element is: "+head.data);
+            return;
+        }
+ 
+        Node temp=head;
+ 
+        for (int i=0;i<length/2;i++)
+        {
+            temp=temp.next;
+        }
+ 
+        System.out.println("Middle Element of Linked List is: "+temp.data);
     }
     
     public void display()
@@ -173,6 +223,7 @@ public class SLL
             else if (choice==5)
             {
                 System.out.println("Miscellaneous Operation");
+                op.findMiddleLength();
             }
             else if (choice==6)
             {

@@ -30,7 +30,7 @@ class LinkedListOperations
     public void insertAtBeginning(int data)
     {
         Node newNode = new Node(data);
-        newNode.next=head;
+        newNode.next = head;
         head=newNode;
         length++;
         System.out.println("Node Inserted at beginning with data = "+data+" & length="+length);
