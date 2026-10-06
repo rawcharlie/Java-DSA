@@ -7,10 +7,9 @@ public class ValidAnagram {
             System.out.print("Not an anagram");
         }
 
-       else{
-         int[] count = new int[26];
+        int[] count = new int[26];
 
-        for(int i=0;i<s.length();i++){
+        for (int i = 0; i < s.length(); i++) {
             count[s.charAt(i) - 'a']++;
             count[t.charAt(i) - 'a']--;
         }
@@ -23,6 +22,5 @@ public class ValidAnagram {
         }
 
         System.out.print("An anagram");
-       }
     }
 }
